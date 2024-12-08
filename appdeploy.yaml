@@ -20,7 +20,11 @@ spec:
         imagePullPolicy: Always
         ports:
         - name: vproapp-port
+<<<<<<< HEAD:appdeploy.yaml
           containerPort: 8080
+=======
+          containerPort: 8080 # Fixed indentation
+>>>>>>> b2303ccebbdb17540ed3c835586bb9fb679f1a77:kubedefs/appdeploy.yaml
       initContainers:
       - name: init-mydb
         image: busybox
@@ -31,3 +35,4 @@ spec:
       - name: init-rabbitmq
         image: busybox
         command: ['sh', '-c', "until nslookup vpromq01.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for mydb; sleep 2; done"]
+
