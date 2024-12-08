@@ -20,11 +20,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - name: vproapp-port
-<<<<<<< HEAD:appdeploy.yaml
           containerPort: 8080
-=======
-          containerPort: 8080 # Fixed indentation
->>>>>>> b2303ccebbdb17540ed3c835586bb9fb679f1a77:kubedefs/appdeploy.yaml
       initContainers:
       - name: init-mydb
         image: busybox
